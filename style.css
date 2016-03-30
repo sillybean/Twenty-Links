@@ -1,0 +1,93 @@
+/*
+Theme Name: Twenty Links
+Theme URI: http://links.sillybean.net/
+Description: A linky child theme for Twenty Ten
+Author: Stephanie Leary
+Author URI: http://sillybean.net/
+Template: twentyten
+Version: 0.6.2
+License: GPL
+*/
+@import url(../twentyten/style.css);
+
+/* General Page Stuff */
+#content { font: 12px/1.6 Arial; margin-left: 0; }
+#branding img, div#access { display: none; }
+#branding { overflow: auto; border-bottom: 2px solid #000; }
+#site-generator a.twentylinks { background: none; padding-left: 0; }
+#main { padding-top: 20px; }
+
+/* Deleted Post Notice */
+p.notice { border: 1px solid #fc0; background: #ffd; color: #f90; font-weight: bold; padding: 1em; }
+
+/* Tag Breadcrumb Trail and Search Input */
+#tag-trail { background: #ededed; /* padding-left: .5em; */ }
+#tag-trail h1.post-count { float: left; width: 78px; margin: 0 0 0 2px; color: #000; line-height: 2.5em; font-size: 16px; font-weight: bold; }
+#tag-trail h1.page-title, #content form#tag-filter { display: inline; }
+#tag-trail h1.page-title { margin-bottom: 0; }
+#content form#tag-filter input { margin: 1em; font: 11px/1.2 Arial; display: inline; }
+body.home #content form#tag-filter input { margin-left: 0; }
+#tag-trail h1 a.remove-tag { font-weight: normal; margin-right: .5em; }
+
+/* Posts */
+div.day { border-top: 1px solid #ccc; overflow: auto; padding: 0; margin-bottom: -1px; position: relative; }
+#content h2.date { position: absolute; width: 70px; font-size: .9em; clear: both; color: #aaa; text-transform: uppercase; margin: 0; padding: 1em 0 0; line-height: 2.3em; }
+div.post { float: right; clear: left; width: 580px; border-bottom: 1px solid #ccc; }
+div.post.status-private { background: #f9f9f9; }
+.hentry { margin: 0; }
+div.entry-content { margin: 1em 0 -1em; padding: 0; line-height: 2em; }
+div.entry-content a { font-size: 1.2em; text-decoration: none; }
+div.entry-tags { float: right; width: 75%; font-size: .9em; clear: right; line-height: 1.76; }
+div.entry-tags span.single-tag { float: right; margin-top: 2px; }
+div.entry-tags a { background: #ededed; color: #000; padding: 3px; margin: 0 0 0 2px; text-decoration: none; }
+div.entry-tags a:hover { background: #d3d3d3; }
+div.entry-tags a.plus { margin: 2px 0 0; border-left: 1px solid #c0c0c0; color: #808080; }
+div.entry-tags a.this-tag { background: #d3d3d3; }
+div.entry-utility { float: left; width: 23%; font-size: .9em; clear: left; line-height: 1.76; }
+div.entry-utility a { color: #aaa; text-transform: uppercase; text-decoration: none; }
+
+/* Page Navigation */
+.navigation { overflow: inherit; }
+.navigation a:link, .navigation a:visited, #nav-below span { border: 1px solid #ccc; padding: .5em; }
+#nav-below span.meta-nav { border: 0; }
+#nav-below span.current { border-color: inherit; }
+#nav-below { margin: 3em auto 1em; }
+.wp-pagenavi { text-align: center; }
+
+/* Tag List Widget */
+#main .widget-area { font: 12px/1.6 Arial; }
+#main .widget-area ul ul#tag-list-widget { margin: 0; padding: 0; list-style: none; border-top: 1px solid #ccc; font-size: .9; }
+#main .widget-area ul ul#tag-list-widget li { border-bottom: 1px solid #ccc; padding: 0; }
+#main .widget-area ul ul#tag-list-widget li a { display: block; padding: .2em 0; }
+#main .widget-area ul ul#tag-list-widget li a:hover { background: #f0f0f0; }
+#main .widget-area ul ul#tag-list-widget li span.count { float: right; }
+
+/* Tag Autocomplete */
+.ac_results { padding: 0; margin: 0; list-style: none; position: absolute; z-index: 10000; display: none; border-width: 1px; border-style: solid; background: #fff; }
+.ac_results li { padding: 2px 5px; 	white-space: nowrap; text-align: left; }
+.ac_over { cursor: pointer; }
+.ac_match { text-decoration: underline; }
+
+/* Login button */
+div#login20links { position: absolute; top: 0; width: 100%; }
+div#login20links p { padding: 0; width: 5em; overflow: visible; margin: 0 auto; font-family: Arial; font-size: .8em; text-align: center; background: #09c; }
+div#login20links a { background: #09c; color: #fff; padding: .2em .5em; display: block; font-weight: bold; text-decoration: none; }
+
+/* -------- MEDIA QUERIES ----------- */
+/* ------------ 400-600 ------------ */
+@media (max-width: 600px) { 
+	#access .menu-header, div.menu, #colophon, #branding, #main, #wrapper { width: 450px; }
+	#site-title, #site-description { float: none; width: 100%; }
+	#container, #content { float: none; margin: 0 0 20px; } 
+	#primary, #secondary { float: none; width: 100%; }
+	#content h2.date { background: #aaa; color: #fff; position: static; width: 100%; margin: 0; padding: 0 0 0 2px; font-size: .5em; }
+	div.post { float: none; width: 100%; position: relative; overflow: auto; }
+	div.day { overflow: hidden; }
+	div.entry-tags { width: 64%; /*float: none; width: 100%;*/ overflow: auto; }
+	div.entry-utility { width: 35%; /*float: none; position: absolute; top: 0; right: 0; text-align: right; background: #fff;*/ }
+}
+
+/* ------------- <400 ------------- */
+@media (max-width: 400px) { 
+	#access .menu-header, div.menu, #colophon, #branding, #main, #wrapper { width: 360px; }
+}
